@@ -297,6 +297,75 @@ body{background:#fff;font-size:10pt;-webkit-print-color-adjust:exact;print-color
   margin-top: 8px;
 }
 
+
+/* Partner dropdown */
+.partner-menu {
+  color: #c6d2e5;
+  font-size: 13px;
+}
+
+.partner-menu summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 11px 13px;
+  border-radius: 11px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #c6d2e5;
+}
+
+.partner-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.partner-menu summary:hover,
+.partner-menu[open] summary {
+  background: #1e4f91;
+  color: #fff;
+}
+
+.partner-menu summary .ico {
+  width: 20px;
+  text-align: center;
+}
+
+.partner-chevron {
+  margin-left: auto;
+  font-size: 11px;
+  transition: transform 0.2s;
+}
+
+.partner-menu[open] .partner-chevron {
+  transform: rotate(180deg);
+}
+
+.partner-submenu {
+  padding: 5px 0 2px 20px;
+}
+
+.partner-submenu a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  color: #c6d2e5;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.partner-submenu a:hover {
+  background: #ffffff14;
+  color: #fff;
+}
+
+.partner-submenu .ico {
+  width: 16px;
+  text-align: center;
+}
+
+
 </style>
 </head>
 
@@ -315,6 +384,20 @@ body{background:#fff;font-size:10pt;-webkit-print-color-adjust:exact;print-color
   <nav class="nav" aria-label="Main navigation">
     <a class="active" href="#home"><span class="ico">⌂</span>Overview</a>
     <a href="#about"><span class="ico">◉</span>About Me</a>
+    <details class="partner-menu">
+      <summary>
+        <span class="ico">♧</span>
+        <span>Partner</span>
+        <span class="partner-chevron">▾</span>
+      </summary>
+
+      <div class="partner-submenu">
+        <a href="michael.html">
+          <span class="ico">↗</span>
+          Michael John Garcia
+        </a>
+      </div>
+    </details>
     <a href="#services"><span class="ico">▦</span>Services</a>
     <a href="#experience"><span class="ico">▣</span>Experience</a>
     <a href="#skills"><span class="ico">⚙</span>Skills & Tools</a>
