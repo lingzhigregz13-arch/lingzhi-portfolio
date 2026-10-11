@@ -3,876 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Michael John Garcia's professional portfolio in customer support, technical support, and client relations.">
-  <title>Michael John Garcia | Professional Portfolio</title>
-
+  <meta name="description" content="Michael John Garcia's portfolio in customer support, technical support, and client relations.">
+  <title>Michael John Garcia | Partner Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --navy: #0b1730;
-      --navy2: #102344;
-      --blue: #2367d1;
-      --blue2: #eaf2ff;
-      --ink: #17243a;
-      --muted: #647188;
-      --line: #d5e2f2;
-      --bg: #e8eff8;
-      --shadow: 0 18px 48px rgba(12, 31, 63, .09);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 90px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: 'DM Sans', sans-serif;
-      line-height: 1.65;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    button {
-      font: inherit;
-    }
-
-    /* SIDEBAR */
-
-    .sidebar {
-      position: fixed;
-      inset: 0 auto 0 0;
-      width: 246px;
-      background: linear-gradient(180deg, #0b1830, #102746);
-      color: #fff;
-      padding: 27px 18px;
-      display: flex;
-      flex-direction: column;
-      z-index: 20;
-      overflow-y: auto;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      padding: 0 9px 25px;
-      border-bottom: 1px solid #ffffff20;
-    }
-
-    .brand-mark {
-      height: 42px;
-      width: 42px;
-      border: 1px solid #7fb4ff;
-      border-radius: 13px;
-      display: grid;
-      place-items: center;
-      font: 800 18px Manrope, sans-serif;
-      color: #cfe2ff;
-      flex-shrink: 0;
-    }
-
-    .brand strong {
-      display: block;
-      font: 800 13px Manrope, sans-serif;
-      letter-spacing: 1px;
-    }
-
-    .brand small {
-      color: #a9bad3;
-      font-size: 11px;
-    }
-
-    .nav {
-      display: grid;
-      gap: 6px;
-      margin-top: 22px;
-    }
-
-    .nav a {
-      padding: 11px 13px;
-      border-radius: 11px;
-      color: #c6d2e5;
-      font-size: 13px;
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      transition: background .2s, color .2s;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      background: #1e4f91;
-      color: #fff;
-    }
-
-    .ico {
-      width: 20px;
-      text-align: center;
-      flex-shrink: 0;
-    }
-
-    .side-note {
-      margin-top: auto;
-      padding: 20px 10px 0;
-      color: #aebdd1;
-      font-size: 12px;
-      border-top: 1px solid #ffffff20;
-    }
-
-    .side-note strong {
-      display: block;
-      color: #fff;
-      margin-bottom: 5px;
-      font-size: 13px;
-    }
-
-    /* MAIN LAYOUT */
-
-    .main {
-      margin-left: 246px;
-      min-width: 0;
-    }
-
-    .topbar {
-      min-height: 72px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: #ffffffed;
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 14px clamp(20px, 4vw, 55px);
-    }
-
-    .crumb {
-      font-size: 12px;
-      color: var(--muted);
-    }
-
-    .crumb strong {
-      color: var(--ink);
-    }
-
-    .top-actions {
-      display: flex;
-      gap: 9px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 15px;
-      border-radius: 10px;
-      background: #fff;
-      border: 1px solid var(--line);
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform .2s, box-shadow .2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 18px rgba(12, 31, 63, .1);
-    }
-
-    .btn.primary {
-      background: var(--blue);
-      color: #fff;
-      border-color: var(--blue);
-    }
-
-    .content {
-      max-width: 1200px;
-      margin: auto;
-      padding: 30px clamp(18px, 4vw, 55px) 55px;
-    }
-
-    /* HERO */
-
-    .eyebrow {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-      color: #9ec5ff;
-    }
-
-    .hero {
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: 150px minmax(0, 1fr);
-      align-items: center;
-      gap: 28px;
-      padding: clamp(25px, 4vw, 45px);
-      border-radius: 24px;
-      background: linear-gradient(125deg, #0b1730, #173d72 75%, #2367d1);
-      color: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    .hero::after {
-      content: 'MJ';
-      position: absolute;
-      right: 25px;
-      bottom: -55px;
-      font: 800 clamp(100px, 17vw, 220px) Manrope, sans-serif;
-      color: #ffffff08;
-      pointer-events: none;
-    }
-
-    .avatar {
-      width: 145px;
-      height: 145px;
-      border-radius: 26px;
-      background: #eaf2ff;
-      color: #173d72;
-      display: grid;
-      place-items: center;
-      border: 4px solid #ffffff35;
-      font: 800 42px Manrope, sans-serif;
-      letter-spacing: 1px;
-    }
-
-    .hero h1 {
-      font: 800 clamp(30px, 4vw, 48px)/1.12 Manrope, sans-serif;
-      margin: 8px 0 9px;
-      letter-spacing: -1px;
-    }
-
-    .hero h2 {
-      font: 600 clamp(16px, 2vw, 22px) Manrope, sans-serif;
-      color: #cfe2ff;
-      margin: 0 0 14px;
-    }
-
-    .hero p {
-      max-width: 720px;
-      color: #dce8f8;
-      margin: 0 0 20px;
-      font-size: 14px;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero .btn {
-      background: #fff;
-      color: #173d72;
-      border-color: #fff;
-    }
-
-    .hero .btn.outline {
-      background: #ffffff12;
-      color: #fff;
-      border-color: #ffffff45;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .tag {
-      font-size: 11px;
-      color: #e6f0ff;
-      border: 1px solid #ffffff35;
-      background: #ffffff10;
-      padding: 6px 10px;
-      border-radius: 999px;
-    }
-
-    /* SECTIONS AND CARDS */
-
-    .section-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: end;
-      gap: 15px;
-      margin: 34px 0 16px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font: 800 23px Manrope, sans-serif;
-    }
-
-    .section-head p {
-      margin: 5px 0 0;
-      color: var(--muted);
-      font-size: 13px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 17px;
-    }
-
-    .card {
-      background: #fff;
-      border: 1px solid #dce6f3;
-      border-radius: 17px;
-      padding: 22px;
-      box-shadow: 0 8px 25px rgba(12, 31, 63, .04);
-      min-width: 0;
-    }
-
-    .card h3 {
-      font: 800 16px Manrope, sans-serif;
-      margin: 0 0 12px;
-    }
-
-    .card p {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0;
-    }
-
-    /* WORK EXPERIENCE */
-
-    .job {
-      padding: 0 0 20px;
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .job:last-child {
-      border-bottom: 0;
-      padding-bottom: 0;
-      margin-bottom: 0;
-    }
-
-    .job-top {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: start;
-    }
-
-    .job h4 {
-      margin: 0;
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .job .role {
-      font-weight: 700;
-      color: #315b96;
-      font-size: 12px;
-      margin: 2px 0 6px;
-    }
-
-    .date {
-      white-space: nowrap;
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .job p {
-      font-size: 13px;
-      color: var(--muted);
-      margin: 6px 0 0;
-    }
-
-    /* SKILLS */
-
-    .pill-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .pill {
-      background: var(--blue2);
-      color: #244e89;
-      border: 1px solid #d4e4fb;
-      border-radius: 9px;
-      padding: 8px 10px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .contact-link {
-      color: #245aa5;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      overflow-wrap: anywhere;
-    }
-
-    .footer {
-      color: var(--muted);
-      font-size: 11px;
-      text-align: center;
-      margin-top: 28px;
-    }
-
-    /* MOBILE RESPONSIVENESS */
-
-    @media (max-width: 850px) {
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        inset: auto;
-        padding: 16px;
-      }
-
-      .brand {
-        padding-bottom: 14px;
-      }
-
-      .nav {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 14px;
-      }
-
-      .nav a {
-        padding: 9px 11px;
-      }
-
-      .side-note {
-        display: none;
-      }
-
-      .main {
-        margin-left: 0;
-      }
-
-      .topbar {
-        position: relative;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: left;
-      }
-
-      .avatar {
-        width: 105px;
-        height: 105px;
-        border-radius: 22px;
-        font-size: 32px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .content {
-        padding-top: 20px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .topbar {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .hero {
-        padding: 23px;
-      }
-
-      .job-top {
-        flex-direction: column;
-        gap: 3px;
-      }
-
-      .content {
-        padding-left: 14px;
-        padding-right: 14px;
-      }
-
-      .card {
-        padding: 18px;
-      }
-    }
-
-    /* PRINT / SAVE AS PDF */
-
-    @media print {
-      .sidebar,
-      .topbar,
-      .hero-actions {
-        display: none !important;
-      }
-
-      .main {
-        margin-left: 0;
-      }
-
-      body {
-        background: #fff;
-      }
-
-      .content {
-        max-width: 100%;
-        padding: 0;
-      }
-
-      .hero,
-      .card {
-        box-shadow: none;
-        break-inside: avoid;
-      }
-    }
+    :root{--navy:#0b1730;--navy2:#102344;--blue:#2367d1;--blue2:#eaf2ff;--ink:#17243a;--muted:#647188;--line:#d5e2f2;--bg:#e8eff8;--shadow:0 18px 48px rgba(12,31,63,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65}a{color:inherit;text-decoration:none}button{font:inherit}
+    .sidebar{position:fixed;inset:0 auto 0 0;width:246px;background:linear-gradient(180deg,#0b1830,#102746);color:#fff;padding:27px 18px;display:flex;flex-direction:column;z-index:20;overflow-y:auto}.brand{display:flex;align-items:center;gap:11px;padding:0 9px 25px;border-bottom:1px solid #ffffff20}.brand-mark{height:42px;width:42px;border:1px solid #7fb4ff;border-radius:13px;display:grid;place-items:center;font:800 18px Manrope;color:#cfe2ff}.brand strong{display:block;font:800 13px Manrope;letter-spacing:1px}.brand small{color:#a9bad3;font-size:11px}.nav{display:grid;gap:6px;margin-top:22px}.nav a{padding:11px 13px;border-radius:11px;color:#c6d2e5;font-size:13px;display:flex;gap:12px;align-items:center}.nav a:hover,.nav a.active{background:#1e4f91;color:#fff}.ico{width:20px;text-align:center}.side-note{margin-top:auto;padding:20px 10px 0;color:#aebdd1;font-size:12px;border-top:1px solid #ffffff20}.side-note strong{display:block;color:#fff;margin-bottom:5px;font-size:13px}
+    .main{margin-left:246px;min-width:0}.topbar{min-height:72px;position:sticky;top:0;z-index:10;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px clamp(20px,4vw,55px)}.crumb{font-size:12px;color:var(--muted)}.crumb strong{color:var(--ink)}.top-actions{display:flex;gap:9px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;border-radius:10px;background:#fff;border:1px solid var(--line);font-size:12px;font-weight:700}.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}.content{max-width:1200px;margin:auto;padding:30px clamp(18px,4vw,55px) 55px}.eyebrow{font-size:11px;font-weight:800;letter-spacing:1.6px;text-transform:uppercase;color:#9ec5ff}.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:150px minmax(0,1fr);align-items:center;gap:28px;padding:clamp(25px,4vw,45px);border-radius:24px;background:linear-gradient(125deg,#0b1730,#173d72 75%,#2367d1);color:#fff;box-shadow:var(--shadow)}.hero:after{content:'MJ';position:absolute;right:25px;bottom:-55px;font:800 clamp(100px,17vw,220px) Manrope;color:#ffffff08;pointer-events:none}.avatar{width:145px;height:145px;border-radius:26px;background:#eaf2ff;color:#173d72;display:grid;place-items:center;border:4px solid #ffffff35;font:800 42px Manrope;letter-spacing:1px}.hero h1{font:800 clamp(30px,4vw,48px)/1.12 Manrope;margin:8px 0 9px;letter-spacing:-1px}.hero h2{font:600 clamp(16px,2vw,22px) Manrope;color:#cfe2ff;margin:0 0 14px}.hero p{max-width:720px;color:#dce8f8;margin:0 0 20px;font-size:14px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{font-size:11px;color:#e6f0ff;border:1px solid #ffffff35;background:#ffffff10;padding:6px 10px;border-radius:999px}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;position:relative;z-index:1}.hero .btn{background:#fff;color:#173d72;border-color:#fff}.hero .btn.outline{background:#ffffff12;color:#fff;border-color:#ffffff45}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:34px 0 16px}.section-head h2{margin:0;font:800 23px Manrope}.section-head p{margin:5px 0 0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.card{background:#fff;border:1px solid #dce6f3;border-radius:17px;padding:22px;box-shadow:0 8px 25px rgba(12,31,63,.04);min-width:0}.card h3{font:800 16px Manrope;margin:0 0 12px}.card p{color:var(--muted);font-size:13px;margin:0}.job{padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid var(--line)}.job:last-child{border-bottom:0;padding-bottom:0;margin-bottom:0}.job-top{display:flex;justify-content:space-between;gap:12px;align-items:start}.job h4{margin:0;font-size:14px;font-weight:800}.job .role{font-weight:700;color:#315b96;font-size:12px;margin:2px 0 6px}.date{white-space:nowrap;color:var(--muted);font-size:11px}.job p{font-size:13px;color:var(--muted);margin:6px 0 0}.pill-list{display:flex;flex-wrap:wrap;gap:8px}.pill{background:var(--blue2);color:#244e89;border:1px solid #d4e4fb;border-radius:9px;padding:8px 10px;font-size:12px;font-weight:600}.contact-link{color:#245aa5;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.footer{color:var(--muted);font-size:11px;text-align:center;margin-top:28px}
+
+    /* Expanded portfolio sections: keep the same white-card / pale-blue style */
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .section-kicker{font-size:10px;letter-spacing:1.7px;text-transform:uppercase;font-weight:800;color:var(--blue);margin-bottom:4px}
+    .section-sub{color:var(--muted);font-size:13px;margin:5px 0 0}
+    .service-icon{width:42px;height:42px;display:grid;place-items:center;background:#eaf2ff;color:#163d78;border:1px solid #d4e4fb;border-radius:12px;margin-bottom:14px;font-size:20px}
+    .mini-tags,.skill-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+    .mini-tags span,.skill-chips span{background:#edf4ff;color:#24569c;border:1px solid #d9e7fb;border-radius:7px;padding:5px 8px;font-size:10px;line-height:1.4}
+    .skill-group h3{margin-bottom:10px}
+    .project{padding:0;overflow:hidden;display:flex;flex-direction:column}
+    .project-visual{min-height:145px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#dceaff,#a8c8f5);color:#173d72}
+    .visual-resort{background:linear-gradient(135deg,#d7e9f8,#8bb8d9)}
+    .visual-finance{background:linear-gradient(135deg,#d9e8ff,#9eb9f1)}
+    .visual-automation{background:linear-gradient(135deg,#d7f3ed,#85cbbb)}
+    .visual-privacy{background:linear-gradient(135deg,#e5e0ff,#b4a8ee)}
+    .visual-consulting{background:linear-gradient(135deg,#dce6f6,#a8b9d8)}
+    .visual-sales{background:linear-gradient(135deg,#fbe5d4,#f5bd91)}
+    .visual-symbol{font-size:40px;opacity:.7}
+    .visual-label{position:absolute;left:14px;bottom:12px;font:800 15px Manrope,sans-serif;color:#102344;text-shadow:0 1px 0 #ffffff70}
+    .project-body{padding:19px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+    .project-body h3{margin:0 0 9px}
+    .project-body p{font-size:12px;line-height:1.65}
+    .project-note{margin-top:10px;font-size:11px;color:var(--muted)}
+    .project-detail-link{margin-top:13px;color:#245aa5;font-weight:700;font-size:12px}
+    .case{display:flex;gap:14px;align-items:flex-start}
+    .case-num{flex:0 0 42px;width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#eaf2ff;color:#245aa5;font:800 15px Manrope;border:1px solid #d4e4fb}
+    .case h3{margin:0 0 7px}
+    .case p{font-size:12px;line-height:1.7}
+    .card{background:#fff;border:1px solid #cbdcf2;box-shadow:0 8px 25px rgba(12,31,63,.055)}
+    .card:hover{box-shadow:0 12px 30px rgba(12,31,63,.09)}
+
+    @media(max-width:850px){.sidebar{position:relative;width:100%;height:auto;inset:auto;padding:16px}.brand{padding-bottom:14px}.nav{display:flex;flex-wrap:wrap;margin-top:14px}.nav a{padding:9px 11px}.side-note{display:none}.main{margin-left:0}.topbar{position:relative}.hero{grid-template-columns:1fr;text-align:left}.avatar{width:105px;height:105px;border-radius:22px;font-size:32px}.grid,.grid-3{grid-template-columns:1fr}.content{padding-top:20px}}
+    @media(min-width:851px) and (max-width:1150px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:480px){.topbar{align-items:flex-start;flex-direction:column}.hero{padding:23px}.job-top{flex-direction:column;gap:3px}.content{padding-left:14px;padding-right:14px}.card{padding:18px}}
   </style>
 </head>
-
 <body>
-
-  <!-- SIDEBAR -->
   <aside class="sidebar">
-    <div class="brand">
-      <div class="brand-mark">MJ</div>
-      <div>
-        <strong>MICHAEL JOHN GARCIA</strong>
-        <small>Customer & Technical Support</small>
-      </div>
-    </div>
-
+    <div class="brand"><div class="brand-mark">MJ</div><div><strong>MICHAEL JOHN GARCIA</strong><small>Customer & Technical Support</small></div></div>
     <nav class="nav" aria-label="Michael's portfolio navigation">
-      <a class="active" href="#home">
-        <span class="ico">⌂</span> Overview
-      </a>
-
-      <a href="#experience">
-        <span class="ico">▣</span> Experience
-      </a>
-
-      <a href="#education">
-        <span class="ico">▤</span> Education
-      </a>
-
-      <a href="#skills">
-        <span class="ico">⚙</span> Skills
-      </a>
-
-      <a href="#languages">
-        <span class="ico">◉</span> Languages
-      </a>
-
-      <a href="#contact">
-        <span class="ico">✉</span> Contact
-      </a>
-
-      <a href="index.html">
-        <span class="ico">↩</span> Back to Lingzhi's Portfolio
-      </a>
+      <a class="active" href="#home"><span class="ico">⌂</span>Overview</a>
+      <a href="#services"><span class="ico">▦</span>Core Services</a>
+      <a href="#experience"><span class="ico">▣</span>Experience</a>
+      <a href="#education"><span class="ico">▤</span>Education</a>
+      <a href="#skills"><span class="ico">⚙</span>Skills & Tools</a>
+      <a href="#ai"><span class="ico">✦</span>AI & Intelligent Automation</a>
+      <a href="#projects"><span class="ico">▧</span>Featured Projects</a>
+      <a href="#case-studies"><span class="ico">▤</span>Case Study Highlights</a>
+      <a href="#languages"><span class="ico">◉</span>Languages</a>
+      <a href="#contact"><span class="ico">✉</span>Contact</a>
+      <a href="index.html"><span class="ico">↩</span>Back to Lingzhi's Portfolio</a>
     </nav>
-
-    <div class="side-note">
-      <strong>Professional Focus</strong>
-      Customer care, technical troubleshooting, clear communication, and dependable support.
-    </div>
+    <div class="side-note"><strong>Professional focus</strong>Customer care, technical troubleshooting, clear communication, and dependable support.</div>
   </aside>
-
-  <!-- MAIN CONTENT -->
   <main class="main" id="home">
-
-    <header class="topbar">
-      <div class="crumb">
-        Portfolio / <strong>Michael John Garcia</strong>
-      </div>
-
-      <div class="top-actions">
-        <a class="btn" href="index.html">
-          ← Lingzhi's Portfolio
-        </a>
-
-        <a class="btn primary" href="mailto:michaeljawngarcia@gmail.com">
-          ✉ Contact Michael
-        </a>
-
-        <button class="btn" type="button" onclick="window.print()">
-          ⤓ Save as PDF
-        </button>
-      </div>
-    </header>
-
+    <header class="topbar"><div class="crumb">Portfolio / <strong>Michael John Garcia</strong></div><div class="top-actions"><a class="btn" href="index.html">← Lingzhi's Portfolio</a><a class="btn primary" href="mailto:michaeljawngarcia@gmail.com">✉ Contact Michael</a></div></header>
     <div class="content">
-
-      <!-- HERO -->
       <section class="hero">
-        <div class="avatar" aria-label="Michael John Garcia initials">
-          MJG
-        </div>
-
+        <div class="avatar" aria-label="Michael John Garcia initials">MJG</div>
         <div>
           <div class="eyebrow">Professional Portfolio</div>
-
           <h1>Michael John Garcia</h1>
-
           <h2>Customer Support | Technical Support</h2>
-
-          <p>
-            Customer-focused support professional with experience assisting customers,
-            responding to inquiries, troubleshooting technical and account-related issues,
-            documenting interactions, and following established procedures. Brings a
-            practical, organized approach to customer service and problem resolution.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn" href="mailto:michaeljawngarcia@gmail.com">
-              Send an Email ↗
-            </a>
-
-            <a class="btn outline" href="#experience">
-              Explore Experience ↓
-            </a>
-          </div>
-
-          <div class="tags">
-            <span class="tag">Customer Support</span>
-            <span class="tag">Technical Troubleshooting</span>
-            <span class="tag">Client Relations</span>
-            <span class="tag">Documentation</span>
-            <span class="tag">Data Accuracy</span>
-          </div>
+          <p>Customer-focused support professional with experience assisting customers, responding to inquiries, troubleshooting technical and account-related issues, documenting interactions, and following established procedures. Brings a practical, organized approach to customer service and problem resolution.</p>
+          <div class="hero-actions"><a class="btn" href="mailto:michaeljawngarcia@gmail.com">Send an Email ↗</a><a class="btn outline" href="#experience">Explore Experience ↓</a></div>
+          <div class="tags"><span class="tag">Customer Support</span><span class="tag">Technical Troubleshooting</span><span class="tag">Client Relations</span><span class="tag">Documentation</span><span class="tag">Data Accuracy</span></div>
         </div>
       </section>
 
-      <!-- OVERVIEW -->
-      <div class="section-head">
-        <div>
-          <h2>Professional Overview</h2>
-          <p>
-            Customer service experience across retail, technical support,
-            and customer support environments.
-          </p>
-        </div>
-      </div>
-
+      <div class="section-head"><div><h2>Professional Overview</h2><p>Customer service experience across retail, technical support, and customer support environments.</p></div></div>
       <section class="grid">
-        <article class="card">
-          <h3>Career Highlights</h3>
-          <p>
-            Experience includes product assistance and inventory support at
-            KCC Mall of Gensan, technical support at Six Eleven Global Services,
-            and customer support at Teleperformance. Work has involved communicating
-            clearly, documenting customer interactions, and helping resolve concerns
-            efficiently.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Working Approach</h3>
-          <p>
-            Professional and friendly communication, careful record keeping,
-            following established procedures, timely follow-up, and a focus on
-            providing customers with accurate information and practical next steps.
-          </p>
-        </article>
+        <article class="card"><h3>Career Highlights</h3><p>Experience includes product assistance and inventory support at KCC Mall of Gensan, technical support at Six Eleven Global Services, and customer support at Teleperformance. Work has involved communicating clearly, documenting customer interactions, and helping resolve concerns efficiently.</p></article>
+        <article class="card"><h3>Working Approach</h3><p>Professional and friendly communication, careful record keeping, following established procedures, timely follow-up, and a focus on providing customers with accurate information and practical next steps.</p></article>
       </section>
 
-      <!-- EXPERIENCE -->
+      <!-- CORE SERVICES: copied from the main portfolio as an editable starting point -->
+      <section id="services">
+        <div class="section-head"><div><div class="section-kicker">How I can help</div><h2>Core Services</h2><p class="section-sub">Editable service cards based on Lingzhi's current portfolio; revise these to reflect Michael's own offerings.</p></div></div>
+        <div class="grid-3">
+          <article class="card"><div class="service-icon">▤</div><h3>Administrative Support</h3><p>Data entry, document organization, email management, research, records maintenance, and routine operational assistance.</p><div class="mini-tags"><span>Data Entry</span><span>Email</span><span>Google Workspace</span></div></article>
+          <article class="card"><div class="service-icon">§</div><h3>Legal Documentation Support</h3><p>Document preparation, organizing case files, drafting routine legal documents, and research support.</p><div class="mini-tags"><span>Document Formatting</span><span>File Organization</span><span>Legal Admin</span></div></article>
+          <article class="card"><div class="service-icon">◈</div><h3>Privacy Operations</h3><p>Data broker research, personal data exposure review, opt-out process documentation, and privacy-removal workflow support.</p><div class="mini-tags"><span>Broker Research</span><span>Opt-out Workflows</span><span>Documentation</span></div></article>
+          <article class="card"><div class="service-icon">⚙</div><h3>Workflow Automation</h3><p>Practical automation for repetitive tasks, form submissions, notifications, and data movement across connected tools.</p><div class="mini-tags"><span>n8n</span><span>Apps Script</span><span>Integrations</span></div></article>
+          <article class="card"><div class="service-icon">⌘</div><h3>Website & Web App Development</h3><p>Responsive websites and lightweight web applications, including booking forms, dashboards, and admin workflows.</p><div class="mini-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Deployment</span></div></article>
+          <article class="card"><div class="service-icon">☏</div><h3>Customer & Operations Support</h3><p>Customer communication, inquiry tracking, information updates, follow-ups, and structured support processes.</p><div class="mini-tags"><span>Customer Support</span><span>Record Tracking</span><span>Follow-up</span></div></article>
+        </div>
+      </section>
+
       <section id="experience">
-        <div class="section-head">
-          <div>
-            <h2>Work Experience</h2>
-            <p>Professional experience and responsibilities.</p>
-          </div>
-        </div>
-
+        <div class="section-head"><div><h2>Work Experience</h2><p>Roles and responsibilities based on the supplied curriculum vitae.</p></div></div>
         <article class="card">
-
-          <div class="job">
-            <div class="job-top">
-              <div>
-                <h4>KCC Mall of Gensan</h4>
-                <div class="role">Promodiser</div>
-              </div>
-
-              <span class="date">Mar 2021 – Jul 2022</span>
-            </div>
-
-            <p>
-              Maintained attractive and organized product displays, monitored
-              product availability, supported inventory checks and restocking,
-              assisted customers with product inquiries and recommendations,
-              supported promotional activities, and coordinated with store
-              personnel to maintain an organized, customer-friendly sales environment.
-            </p>
-          </div>
-
-          <div class="job">
-            <div class="job-top">
-              <div>
-                <h4>Six Eleven Global Services</h4>
-                <div class="role">Technical Support</div>
-              </div>
-
-              <span class="date">Aug 2023 – Oct 2024</span>
-            </div>
-
-            <p>
-              Identified and resolved product, service, and account-related issues;
-              guided customers through troubleshooting; communicated solutions
-              clearly; documented interactions and technical issues; and supported
-              timely follow-ups and positive customer experiences.
-            </p>
-          </div>
-
-          <div class="job">
-            <div class="job-top">
-              <div>
-                <h4>Teleperformance</h4>
-                <div class="role">Customer Support</div>
-              </div>
-
-              <span class="date">Nov 2024 – Jun 2026</span>
-            </div>
-
-            <p>
-              Assisted clients with inquiries, concerns, and service-related issues
-              through professional communication. Responded to customer requests,
-              provided accurate information, worked to resolve concerns efficiently,
-              maintained interaction records, and followed established procedures.
-            </p>
-          </div>
-
+          <div class="job"><div class="job-top"><div><h4>KCC Mall of Gensan</h4><div class="role">Promodiser</div></div><span class="date">Mar 2021 – Jul 2022</span></div><p>Maintained attractive and organized product displays, monitored product availability, supported inventory checks and restocking, assisted customers with product inquiries and recommendations, supported promotional activities, and coordinated with store personnel to maintain an organized, customer-friendly sales environment.</p></div>
+          <div class="job"><div class="job-top"><div><h4>Six Eleven Global Services</h4><div class="role">Technical Support</div></div><span class="date">Aug 2023 – Oct 2024</span></div><p>Identified and resolved product, service, and account-related issues; guided customers through troubleshooting; communicated solutions clearly; documented interactions and technical issues; and supported timely follow-ups and positive customer experiences.</p></div>
+          <div class="job"><div class="job-top"><div><h4>Teleperformance</h4><div class="role">Customer Support</div></div><span class="date">Nov 2024 – Jun 2026</span></div><p>Assisted clients with inquiries, concerns, and service-related issues through professional communication. Responded to customer requests, provided accurate information, worked to resolve concerns efficiently, maintained interaction records, and followed established procedures.</p></div>
         </article>
       </section>
 
-      <!-- EDUCATION -->
       <section id="education">
-        <div class="section-head">
-          <div>
-            <h2>Education</h2>
-            <p>Academic background.</p>
-          </div>
-        </div>
-
+        <div class="section-head"><div><h2>Education</h2><p>Academic background listed in the CV.</p></div></div>
         <div class="grid">
-          <article class="card">
-            <h3>Gensan Foundation College, Inc.</h3>
-            <p>
-              <strong>
-                Bachelor of Secondary Education (BSEd), major in English
-              </strong>
-            </p>
-            <p style="margin-top:8px">2021 – 2025</p>
-          </article>
-
-          <article class="card">
-            <h3>Labangal National High School</h3>
-            <p><strong>High School</strong></p>
-            <p style="margin-top:8px">2019 – 2021</p>
-          </article>
+          <article class="card"><h3>Gensan Foundation College, Inc.</h3><p><strong>Bachelor of Secondary Education (BSEd), major in English</strong></p><p style="margin-top:8px">2021 – 2025</p></article>
+          <article class="card"><h3>Labangal National High School</h3><p><strong>High School</strong></p><p style="margin-top:8px">2019 – 2021</p></article>
         </div>
       </section>
 
-      <!-- SKILLS -->
       <section id="skills">
-        <div class="section-head">
-          <div>
-            <h2>Skills & Tools</h2>
-            <p>Professional capabilities listed in the curriculum vitae.</p>
-          </div>
-        </div>
-
-        <article class="card">
-          <div class="pill-list">
-            <span class="pill">Customer Support & Client Relations</span>
-            <span class="pill">Technical Troubleshooting</span>
-            <span class="pill">Problem Solving</span>
-            <span class="pill">Email & Chat Support</span>
-            <span class="pill">Data Entry & Data Management</span>
-            <span class="pill">Administrative Support</span>
-            <span class="pill">Microsoft Office</span>
-            <span class="pill">Google Workspace</span>
-            <span class="pill">Documentation & Record Keeping</span>
-            <span class="pill">Data Accuracy & Attention to Detail</span>
-            <span class="pill">Communication & Coordination</span>
-            <span class="pill">Time Management</span>
-            <span class="pill">Process Adherence</span>
-            <span class="pill">Conflict Resolution</span>
-            <span class="pill">Confidentiality & Data Privacy</span>
-            <span class="pill">Adaptability & Teamwork</span>
-          </div>
-        </article>
+        <div class="section-head"><div><h2>Skills & Tools</h2><p>Capabilities identified in the supplied résumé.</p></div></div>
+        <article class="card"><div class="pill-list"><span class="pill">Customer Support & Client Relations</span><span class="pill">Technical Troubleshooting</span><span class="pill">Problem Solving</span><span class="pill">Email & Chat Support</span><span class="pill">Data Entry & Data Management</span><span class="pill">Administrative Support</span><span class="pill">Microsoft Office</span><span class="pill">Google Workspace</span><span class="pill">Documentation & Record Keeping</span><span class="pill">Data Accuracy & Attention to Detail</span><span class="pill">Communication & Coordination</span><span class="pill">Time Management</span><span class="pill">Process Adherence</span><span class="pill">Conflict Resolution</span><span class="pill">Confidentiality & Data Privacy</span><span class="pill">Adaptability & Teamwork</span></div></article>
       </section>
 
-      <!-- LANGUAGES -->
+      <!-- EXPANDED SKILLS & TOOLS: editable template content -->
+      <!-- AI & INTELLIGENT AUTOMATION: editable placeholder section -->
+      <section id="ai">
+        <div class="section-head"><div><div class="section-kicker">Practical AI use</div><h2>AI & Intelligent Automation</h2><p class="section-sub">A section reserved for Michael's AI tools, automation knowledge, and examples once confirmed.</p></div></div>
+        <div class="grid">
+          <article class="card skill-group"><h3>AI-Assisted Research & Productivity</h3><div class="skill-chips"><span>Research Assistance — confirm</span><span>Information Structuring — confirm</span><span>Prompt Writing — confirm</span><span>Output Review — confirm</span><span>Documentation Support — confirm</span></div><p style="margin-top:12px">Edit these tags after confirming which tools and workflows Michael has actually used.</p></article>
+          <article class="card skill-group"><h3>Intelligent Automation</h3><div class="skill-chips"><span>Workflow Mapping — confirm</span><span>Trigger and Action Design — confirm</span><span>Automated Notifications — confirm</span><span>Data Mapping — confirm</span><span>Human Review — confirm</span></div><p style="margin-top:12px">Add verified tools, examples, and outcomes here later.</p></article>
+          <article class="card" style="grid-column:1/-1"><h3>Responsible AI Practice</h3><p>Suggested editable copy: AI can assist with drafting, research, and repetitive workflows, but outputs should be reviewed for accuracy before use. Replace this text with Michael's own approach and experience.</p></article>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS: copied project examples from Lingzhi's current portfolio for later editing -->
+      <section id="projects">
+        <div class="section-head"><div><div class="section-kicker">Selected work</div><h2>Featured Projects</h2><p class="section-sub">Project cards copied from Lingzhi's portfolio as editable placeholders. Replace descriptions, screenshots, and links with Michael's own work before publishing as his projects.</p></div></div>
+        <div class="grid-3">
+          <article class="card project"><div class="project-visual visual-resort"><span class="visual-symbol">⌂</span><div class="visual-label">Andreas White House<br>Beach Resort</div></div><div class="project-body"><h3>Andreas White House Beach Resort</h3><p>Responsive resort website and booking experience with accommodation information, booking forms, inquiry handling, and administrative workflows.</p><div class="mini-tags"><span>Website Development</span><span>Booking Forms</span><span>Admin Workflows</span></div><div class="project-note">Template project from Lingzhi's portfolio — replace with Michael's work.</div></div></article>
+          <article class="card project"><div class="project-visual visual-finance"><span class="visual-symbol">▥</span><div class="visual-label">Financial Management<br>Dashboard</div></div><div class="project-body"><h3>Financial Management Dashboard</h3><p>Dashboard concept for tracking cash inflow, expenses, debt, payment status, due dates, and available cash.</p><div class="mini-tags"><span>Google Sheets</span><span>Apps Script</span><span>Dashboards</span></div><div class="project-note">Template project from Lingzhi's portfolio — replace with Michael's work.</div></div></article>
+          <article class="card project"><div class="project-visual visual-automation"><span class="visual-symbol">⇄</span><div class="visual-label">Workflow<br>Automation</div></div><div class="project-body"><h3>Booking & Inquiry Notifications</h3><p>Workflow concept connecting form submissions and spreadsheet records with email notifications and record updates.</p><div class="mini-tags"><span>n8n</span><span>Google Sheets</span><span>Email Automation</span></div><div class="project-note">Template project from Lingzhi's portfolio — replace with Michael's work.</div></div></article>
+          <article class="card project"><div class="project-visual visual-privacy"><span class="visual-symbol">◈</span><div class="visual-label">Privacy Operations<br>Intelligence</div></div><div class="project-body"><h3>Data Broker Intelligence Platform</h3><p>Privacy operations resource concept for organizing broker profiles, removal difficulty, and opt-out guidance.</p><div class="mini-tags"><span>Privacy Research</span><span>Structured Data</span><span>Process Guides</span></div><div class="project-note">Template project from Lingzhi's portfolio — replace with Michael's work.</div></div></article>
+          <article class="card project"><div class="project-visual visual-consulting"><span class="visual-symbol">⌘</span><div class="visual-label">Operations Consulting<br>Web Platform</div></div><div class="project-body"><h3>Operations Consulting Web Platform</h3><p>Professional online presence for operations support, privacy operations, workflow automation, and digital services.</p><div class="mini-tags"><span>Web Design</span><span>Service Presentation</span><span>Portfolio</span></div><div class="project-note">Template project from Lingzhi's portfolio — replace with Michael's work.</div></div></article>
+          <article class="card project"><div class="project-visual visual-sales"><span class="visual-symbol">▧</span><div class="visual-label">Sales & Payment<br>Record Systems</div></div><div class="project-body"><h3>Sales & Payment Record Management</h3><p>Application concept for recording sales, calculating installment balances, tracking payments, and separating paid records from outstanding balances.</p><div class="mini-tags"><span>Data Management</span><span>Payment Tracking</span><span>Business Logic</span></div><div class="project-note">Template project from Lingzhi's portfolio — replace with Michael's work.</div></div></article>
+        </div>
+      </section>
+
+      <!-- CASE STUDY HIGHLIGHTS: editable examples copied from the main portfolio -->
+      <section id="case-studies">
+        <div class="section-head"><div><div class="section-kicker">How I work</div><h2>Case Study Highlights</h2><p class="section-sub">Editable examples from Lingzhi's portfolio. Replace these with Michael's own case studies and verified contributions.</p></div></div>
+        <div class="grid">
+          <article class="card case"><div class="case-num">01</div><div><h3>Organizing Privacy Removal Processes</h3><p><strong>Challenge:</strong> Data brokers use different opt-out requirements. <strong>Approach:</strong> Research, document, and categorize procedures. <strong>Value:</strong> Clearer instructions and more repeatable workflows.</p><p class="project-note">Template case study — replace with Michael's experience.</p></div></article>
+          <article class="card case"><div class="case-num">02</div><div><h3>Managing Booking Inquiries</h3><p><strong>Challenge:</strong> Inquiries can be missed when they require manual checking. <strong>Approach:</strong> Structure form submissions and connect notifications and admin views. <strong>Value:</strong> More visible requests and clearer follow-up.</p><p class="project-note">Template case study — replace with Michael's experience.</p></div></article>
+          <article class="card case"><div class="case-num">03</div><div><h3>Turning Financial Records Into Useful Views</h3><p><strong>Challenge:</strong> Expenses and due dates can be hard to track across separate records. <strong>Approach:</strong> Organize records and calculate totals in a dashboard. <strong>Value:</strong> A clearer view of upcoming obligations and available cash.</p><p class="project-note">Template case study — replace with Michael's experience.</p></div></article>
+          <article class="card case"><div class="case-num">04</div><div><h3>Reducing Repetitive Administrative Work</h3><p><strong>Challenge:</strong> Repeated copying and record updates consume time. <strong>Approach:</strong> Map the steps and identify suitable automation triggers. <strong>Value:</strong> Fewer manual steps and more consistent processes.</p><p class="project-note">Template case study — replace with Michael's experience.</p></div></article>
+        </div>
+      </section>
+
       <section id="languages">
-        <div class="section-head">
-          <div>
-            <h2>Languages</h2>
-            <p>Languages listed in the curriculum vitae.</p>
-          </div>
-        </div>
-
-        <article class="card">
-          <div class="pill-list">
-            <span class="pill">English</span>
-            <span class="pill">Filipino</span>
-          </div>
-        </article>
+        <div class="section-head"><div><h2>Languages</h2><p>Languages listed in the CV.</p></div></div>
+        <article class="card"><div class="pill-list"><span class="pill">English</span><span class="pill">Filipino</span></div></article>
       </section>
 
-      <!-- CONTACT -->
       <section id="contact">
-        <div class="section-head">
-          <div>
-            <h2>Contact</h2>
-            <p>
-              Reach out to discuss customer support or technical support opportunities.
-            </p>
-          </div>
-        </div>
-
-        <article class="card">
-          <h3>Michael John Garcia</h3>
-
-          <p>
-            Email:
-            <a class="contact-link" href="mailto:michaeljawngarcia@gmail.com">
-              michaeljawngarcia@gmail.com
-            </a>
-          </p>
-
-          <p style="margin-top:8px">
-            Location: General Santos City, Philippines
-          </p>
-        </article>
+        <div class="section-head"><div><h2>Contact</h2><p>Reach out to discuss customer support or technical support opportunities.</p></div></div>
+        <article class="card"><h3>Michael John Garcia</h3><p>Email: <a class="contact-link" href="mailto:michaeljawngarcia@gmail.com">michaeljawngarcia@gmail.com</a></p><p style="margin-top:8px">Location: General Santos City, Philippines</p></article>
       </section>
-
-      <footer class="footer">
-        Michael John Garcia · Customer Support | Technical Support
-      </footer>
-
+      <footer class="footer">Michael John Garcia · Customer Support | Technical Support</footer>
     </div>
   </main>
-
 </body>
 </html>
