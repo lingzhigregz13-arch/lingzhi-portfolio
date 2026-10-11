@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lingzhi Gregori's professional portfolio in operations support, privacy operations, AI, automation, and web development.">
+<title>Lingzhi Gregori | Professional Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #0b1730;
+  --navy2: #102344;
+  --blue: #2367d1;
+  --blue2: #eaf2ff;
+  --ink: #17243a;
+  --muted: #647188;
+  --line: #d5e2f2;
+  --bg: #e8eff8;
+  --shadow: 0 18px 48px rgba(12, 31, 63, .09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.sidebar{position:fixed;inset:0 auto 0 0;width:246px;background:linear-gradient(180deg,#0b1830,#102746);color:#fff;padding:27px 18px;display:flex;flex-direction:column;z-index:20}
+.brand{display:flex;align-items:center;gap:11px;padding:0 9px 30px;border-bottom:1px solid #ffffff20}
+.brand-mark{height:42px;width:42px;border:1px solid #7fb4ff;border-radius:13px;display:grid;place-items:center;font:800 19px Manrope;color:#cfe2ff}
+.brand strong{display:block;font:800 13px Manrope;letter-spacing:1.1px}
+.brand small{color:#a9bad3;font-size:11px}
+.nav{display:grid;gap:6px;margin-top:25px}
+.nav a{padding:11px 13px;border-radius:11px;color:#c6d2e5;font-size:13px;display:flex;gap:12px;align-items:center}
+.nav a:hover,.nav a.active{background:#1e4f91;color:white}
+.nav .ico{width:20px;text-align:center}
+.side-note{margin-top:auto;padding:20px 10px 0;color:#aebdd1;font-size:12px;border-top:1px solid #ffffff20}
+.side-note strong{display:block;color:#fff;margin-bottom:5px;font-size:13px}
+.main{margin-left:246px}
+.topbar {
+  height: 76px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0b1830;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #ffffff20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 4vw, 55px);
+}
+
+.crumb {
+  font-size: 12px;
+  color: #a9bad3;
+}
+
+.crumb strong {
+  color: #ffffff;
+}
+.top-actions{display:flex;align-items:center;gap:10px}
+.btn{border:0;border-radius:10px;padding:11px 16px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:12px;font-weight:700;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--blue);color:white;box-shadow:0 6px 16px #2367d12b}
+.btn-primary:hover{background:#174fa9;transform:translateY(-1px)}
+.btn-outline{border:1px solid var(--line);background:white;color:var(--ink)}
+.content{max-width:1500px;margin:auto;padding:30px clamp(20px,4vw,55px) 60px}
+.hero{background:radial-gradient(circle at 85% 15%,#244a7a 0,transparent 36%),linear-gradient(120deg,#0c1932,#122b4b 72%,#17395e);border-radius:20px;color:white;padding:clamp(26px,4vw,48px);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero:after{content:'LG';position:absolute;right:5%;bottom:-100px;font:800 clamp(180px,25vw,330px) Manrope;color:#ffffff08;pointer-events:none}
+.hero-top{display:flex;align-items:center;gap:30px;position:relative;z-index:1}
+.portrait-trigger{display:block;flex:0 0 154px;width:154px;height:174px;padding:0;border:0;background:transparent;cursor:zoom-in;border-radius:18px}
+.portrait{display:block;width:100%;height:100%;object-fit:cover;object-position:center 22%;border:4px solid #ffffffd9;border-radius:18px;box-shadow:0 10px 30px #0003;transition:.2s}
+.portrait-trigger:hover .portrait{transform:translateY(-2px);box-shadow:0 14px 34px #0005}
+.portrait-trigger:focus-visible{outline:3px solid #9fc7ff;outline-offset:4px}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:#9fc7ff;font-weight:700}
+.hero h1{font:800 clamp(30px,4vw,46px)/1.15 Manrope;margin:7px 0 6px;letter-spacing:-1.5px}
+.hero h2{font:600 clamp(15px,2vw,19px) Manrope;margin:0;color:#d7e6fb}
+.hero p{max-width:720px;color:#c6d5e8;font-size:13px;margin:15px 0 19px}
+.hero-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.hero .btn-outline{background:#ffffff10;border-color:#ffffff50;color:#fff}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:19px}
+.tag{border:1px solid #ffffff2a;background:#ffffff0c;color:#e0ebfa;border-radius:100px;padding:5px 10px;font-size:10px}
+.hero-foot{display:flex;gap:24px;flex-wrap:wrap;margin-top:26px;padding-top:19px;border-top:1px solid #ffffff25;color:#d0def0;font-size:11px;position:relative;z-index:1}
+.section{margin-top:37px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:16px}
+.section-kicker{color:var(--blue);text-transform:uppercase;letter-spacing:1.7px;font-size:10px;font-weight:800}
+.section h2{font:800 23px Manrope;letter-spacing:-.6px;margin:3px 0 0}
+.section-sub{font-size:12px;color:var(--muted);margin:5px 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}
+.stat{background:white;border:1px solid var(--line);border-radius:14px;padding:18px}
+.stat b{display:block;font:800 22px Manrope}
+.stat small{font-size:10px;color:var(--muted)}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.card{background:white;border:1px solid var(--line);border-radius:15px;padding:20px;transition:.2s}
+.card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:#c8d8f0}
+.card h3{font:700 14px Manrope;margin:0 0 7px}
+.card p{font-size:12px;color:var(--muted);margin:0}
+.service-icon{height:42px;width:42px;border-radius:12px;background:var(--blue2);display:grid;place-items:center;font-size:20px;margin-bottom:14px}
+.mini-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px}
+.mini-tags span{font-size:10px;color:#2558a1;background:#edf4ff;border-radius:6px;padding:4px 7px}
+.project{padding:0;overflow:hidden}
+.project-visual{height:155px;padding:18px;display:flex;align-items:end;position:relative;overflow:hidden;background:linear-gradient(135deg,#d8e8f8,#b8d0ee)}
+.project-visual .visual-label{font:800 21px Manrope;color:#16355f;max-width:85%;line-height:1.15;position:relative;z-index:1}
+.project-visual .visual-symbol{position:absolute;right:16px;top:12px;font-size:56px;opacity:.22}
+.visual-resort{background:linear-gradient(135deg,#0f544f,#8ec8b0)}
+.visual-resort .visual-label{color:white}
+.visual-finance{background:linear-gradient(135deg,#101e3d,#285c9b)}
+.visual-finance .visual-label{color:white}
+.visual-automation{background:linear-gradient(135deg,#eee7ff,#c5b6f5)}
+.visual-privacy{background:linear-gradient(135deg,#dff4eb,#95d4bd)}
+.visual-consulting{background:linear-gradient(135deg,#dbeaff,#9bbbf2)}
+.project-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.project-visual:has(.project-image)::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,20,42,.5),transparent 85%);pointer-events:none;z-index:0}
+.project-body{padding:18px}
+.project-title-row{display:flex;justify-content:space-between;gap:10px;align-items:start}
+.project-title-row h3{font:700 14px Manrope;margin:0 0 7px}
+.project-title-row a{color:var(--blue);font-size:17px}
+.project-note{font-size:10px;color:#7b8799;margin-top:12px;font-style:italic}
+.timeline{border-left:2px solid #d9e5f6;padding-left:20px;margin-left:8px;display:grid;gap:20px}
+.timeline-item{position:relative}
+.timeline-item:before{content:'';position:absolute;width:10px;height:10px;border-radius:50%;background:var(--blue);left:-26px;top:6px;box-shadow:0 0 0 4px #e8f0ff}
+.timeline-item h3{font:700 14px Manrope;margin:0}
+.timeline-item .meta{font-size:11px;color:var(--blue);margin:3px 0 7px}
+.timeline-item p,.timeline-item li{font-size:12px;color:var(--muted)}
+.timeline-item ul{margin:7px 0 0;padding-left:18px}
+.skill-group h3{font:700 13px Manrope;margin:0 0 11px}
+.skill-chips{display:flex;flex-wrap:wrap;gap:8px}
+.skill-chips span{padding:7px 10px;border:1px solid var(--line);border-radius:8px;font-size:11px;background:#fbfcfe}
+.case{display:flex;gap:14px;align-items:start}
+.case-num{font:800 20px Manrope;color:#9bb8e9}
+.case h3{margin:0 0 5px;font:700 14px Manrope}
+.case p{margin:0;color:var(--muted);font-size:12px}
+.testimonial-head{display:flex;align-items:center;gap:12px;margin-bottom:13px}
+.testimonial-photo,.testimonial-initials{width:54px;height:54px;flex:0 0 54px;border-radius:50%;object-fit:cover;border:2px solid #e6edf7;background:#eaf2ff}
+.testimonial-initials{display:grid;place-items:center;color:#2367d1;font:800 16px Manrope}
+.testimonial-name{font:700 13px Manrope;margin:0}
+.testimonial-role{font-size:11px;color:var(--muted)}
+.stars{color:#e7a51a;letter-spacing:2px;font-size:17px}
+.testimonial-placeholder{font-size:11px!important;color:#7c8799!important;font-style:italic;margin-top:9px!important}
+.contact-panel{background:linear-gradient(115deg,#0c1932,#174274);color:white;border-radius:18px;padding:28px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.contact-panel h2{font:800 23px Manrope;margin:0 0 5px}
+.contact-panel p{font-size:12px;color:#c7d8ef;margin:0}
+.contact-links{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}
+.contact-panel .btn-outline{background:#ffffff12;border-color:#ffffff55;color:white}
+.footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:25px 0 0;color:#7a8799;font-size:10px}
+.image-dialog{border:0;padding:0;background:transparent;max-width:92vw;max-height:92vh;overflow:visible}
+.image-dialog::backdrop{background:rgba(4,10,22,.88);backdrop-filter:blur(5px)}
+.image-dialog img{display:block;max-width:88vw;max-height:82vh;object-fit:contain;border-radius:14px}
+.dialog-close{position:absolute;top:-14px;right:-14px;width:42px;height:42px;border:1px solid #ffffff70;border-radius:50%;background:#102344;color:white;font-size:24px;cursor:pointer}
+.dialog-caption{text-align:center;color:white;font-size:13px;padding-top:12px}
+.mobile-brand{display:none}
+
+@media(max-width:1100px){
+.sidebar{width:210px}.main{margin-left:210px}
+.stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.hero-top{gap:22px}
+.portrait-trigger{width:130px;height:150px;flex-basis:130px}
+}
+@media(max-width:720px){
+.sidebar{display:none}.main{margin-left:0}
+.topbar{height:65px;padding:0 15px}
+.mobile-brand{display:block;font:800 13px Manrope}
+.crumb{display:none}
+.content{padding:18px 14px 35px}
+.top-actions .btn{padding:10px 11px;font-size:11px}
+.hero{padding:24px 20px;border-radius:16px}
+.hero-top{align-items:flex-start;flex-direction:column;gap:17px}
+.portrait-trigger{width:104px;height:116px;flex-basis:auto}
+.portrait{border-radius:14px}
+.hero h1{font-size:31px}.hero h2{font-size:15px}.hero p{font-size:12px}
+.hero-foot{gap:10px;flex-direction:column}
+.stats{gap:9px}.stat{padding:12px}.stat b{font-size:19px}.stat small{font-size:9px}
+.grid-3,.grid-2{grid-template-columns:1fr}
+.section{margin-top:29px}.section h2{font-size:21px}
+.contact-panel{align-items:flex-start;flex-direction:column;padding:23px}
+.project-visual{height:140px}
+}
+@media print{
+@page{size:A4;margin:14mm}
+body{background:#fff;font-size:10pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sidebar,.topbar,.no-print,.image-dialog{display:none!important}
+.main{margin:0}.content{max-width:none;padding:0}
+.hero{box-shadow:none;border-radius:12px;padding:24px;break-inside:avoid}
+.hero:after{font-size:150px}.hero h1{font-size:28px}
+.portrait-trigger{width:110px;height:125px;flex-basis:110px}
+.stats{grid-template-columns:repeat(4,1fr);gap:7px}
+.stat{padding:10px;break-inside:avoid}.stat b{font-size:17px}
+.section{margin-top:22px}.section h2{font-size:18px}
+.grid-3,.grid-2{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.card{padding:13px;box-shadow:none;break-inside:avoid}
+.project{padding:0}.project-visual{height:80px}
+.project-visual .visual-label{font-size:16px}
+.project-body{padding:12px}
+.project-body p,.card p,.timeline-item p,.timeline-item li{font-size:9pt}
+.timeline{gap:12px}.contact-panel{padding:18px;break-inside:avoid}
+.footer{padding-top:14px}
+}
+
+.brand-mark.profile-mark {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-mark.profile-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  border-radius: 50%;
+}
+
+.sidebar-social {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.sidebar-social h4 {
+  margin: 0 0 12px;
+  color: #94a9c8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.sidebar-social a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 8px;
+  margin-bottom: 4px;
+  border-radius: 8px;
+  color: #e5edfa;
+  font-size: 12px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.sidebar-social a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.upwork { background: #14a800; color: white; }
+.onlinejobs { background: #1473e6; color: white; }
+.linkedin { background: #0a66c2; color: white; }
+.github { background: #30363d; color: white; }
+
+.external-icon {
+  margin-left: auto;
+  color: #8fa6c7;
+  font-size: 14px;
+}
+
+/* Improve paragraph spacing in the About Me section */
+#about .card p {
+  margin-top: 0;
+  margin-bottom: 18px;
+  line-height: 1.85;
+}
+
+/* Remove extra space after the final paragraph */
+#about .card p:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* Keep the skill tags separated from the text */
+#about .mini-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="layout">
+<aside class="sidebar no-print">
+  <div class="brand">
+    <div class="brand-mark profile-mark">
+      <img src="assets/profile.png" alt="Lingzhi Gregori profile photo">
+    </div>
+    <div>
+      <strong>LINGZHI GREGORI</strong>
+      <small>Professional Portfolio</small>
+    </div>
+  </div>
+  <nav class="nav" aria-label="Main navigation">
+    <a class="active" href="#home"><span class="ico">⌂</span>Overview</a>
+    <a href="#about"><span class="ico">◉</span>About Me</a>
+    <a href="#services"><span class="ico">▦</span>Services</a>
+    <a href="#experience"><span class="ico">▣</span>Experience</a>
+    <a href="#skills"><span class="ico">⚙</span>Skills & Tools</a>
+    <a href="#ai"><span class="ico">✦</span>AI & Intelligent Automation</a>
+    <a href="#projects"><span class="ico">▤</span>Projects</a>
+    <a href="#case-studies"><span class="ico">◇</span>Case Studies</a>
+    <a href="#testimonials"><span class="ico">★</span>Testimonials</a>
+    <a href="#contact"><span class="ico">✉</span>Contact</a>
+
+    <div class="sidebar-social">
+      <h4>CONNECT WITH ME</h4>
+
+      <a href="https://www.upwork.com/freelancers/~017798bd7814453d58"
+        target="_blank" rel="noopener noreferrer">
+        <span class="social-icon upwork">U</span>
+        <span>Upwork</span>
+        <span class="external-icon">↗</span>
+      </a>
+
+      <a href="https://www.onlinejobs.ph/jobseekers/info/2932716"
+        target="_blank" rel="noopener noreferrer">
+        <span class="social-icon onlinejobs">O</span>
+        <span>OnlineJobs.ph</span>
+        <span class="external-icon">↗</span>
+      </a>
+
+      <a href="https://www.linkedin.com/in/lingzhi-gregori-8b7629243/"
+        target="_blank" rel="noopener noreferrer">
+        <span class="social-icon linkedin">in</span>
+        <span>LinkedIn</span>
+        <span class="external-icon">↗</span>
+      </a>
+
+      <a href="https://github.com/lingzhigregz13-arch"
+        target="_blank" rel="noopener noreferrer">
+        <span class="social-icon github">GH</span>
+        <span>GitHub</span>
+        <span class="external-icon">↗</span>
+      </a>
+    </div>
+  </nav>
+  <div class="side-note"><strong>My approach</strong>Turning repetitive work into clear processes, reliable systems, and practical digital solutions.</div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div class="mobile-brand">LG <span style="font-weight:500;color:#718096">/ Portfolio</span></div>
+  <div class="crumb">Portfolio / <strong>Professional Overview</strong></div>
+  <div class="top-actions">
+    <button class="btn btn-outline" onclick="window.print()" title="Print or save this portfolio as a PDF">⇩ Download PDF</button>
+    <a class="btn btn-primary" href="#contact">✉ Contact Me</a>
+  </div>
+</header>
+
+<div class="content">
+<section class="hero" id="home">
+  <div class="hero-top">
+    <button class="portrait-trigger" type="button" id="openProfilePhoto" aria-label="View larger profile photo">
+      <img class="portrait" src="assets/profile.png" alt="Professional portrait of Lingzhi Gregori">
+    </button>
+    <div>
+      <div class="eyebrow">Professional Portfolio · 2026</div>
+      <h1>Lingzhi Gregori</h1>
+      <h2>Operations, Privacy & Automation Specialist</h2>
+      <p>I combine privacy operations, process improvement, administrative support, and practical digital development to help teams organize information, investigate complex issues, improve repeatable workflows, and reduce manual work.</p>
+      <div class="hero-buttons">
+        <a class="btn btn-primary" href="#projects">Explore My Work ↗</a>
+        <a class="btn btn-outline" href="mailto:Lingzhigregori13@gmail.com">✉ Send an Email</a>
+      </div>
+      <div class="tags">
+        <span class="tag">Operations Support</span><span class="tag">Privacy Operations</span><span class="tag">Workflow Automation</span><span class="tag">Web Development</span><span class="tag">AI-Assisted Productivity</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-foot">
+    <span>⌖ Davao City, Philippines</span>
+    <span>◷ Open to remote and part-time opportunities</span>
+    <span>✉ Lingzhigregori13@gmail.com</span>
+  </div>
+</section>
+
+<section class="section" aria-label="Highlights">
+  <div class="stats">
+    <div class="stat"><b>6+</b><small>Areas of professional experience</small></div>
+    <div class="stat"><b>500+</b><small>Data broker removal processes mastered</small></div>
+    <div class="stat"><b>6</b><small>Selected project examples</small></div>
+    <div class="stat"><b>End-to-end</b><small>Process-focused approach</small></div>
+  </div>
+</section>
+
+
+<section class="section" id="about">
+  <div class="section-head">
+    <div>
+      <div class="section-kicker">Introduction</div>
+      <h2>About Me</h2>
+      <p class="section-sub">
+        A multidisciplinary professional combining privacy operations,
+        process improvement, and practical digital solutions.
+      </p>
+    </div>
+  </div>
+
+  <div class="card">
+    <p>
+      My professional background spans privacy and cybersecurity operations,
+      data broker research, legal administration, airport operations support,
+      customer service, and digital project development. These experiences
+      have strengthened my ability to investigate complex issues, manage
+      sensitive information, document processes, and support teams in
+      maintaining efficient and reliable operations.
+    </p>
+
+    <p>
+      At Optery, I work in privacy operations, focusing on researching data
+      broker opt-out procedures, monitoring removal workflows and
+      automation-related issues, maintaining process documentation, and
+      supporting escalations involving legal and development teams. My role
+      requires analytical thinking, attention to detail, and a consistent
+      commitment to handling privacy-related processes accurately and
+      responsibly.
+    </p>
+
+    <p>
+      Beyond my current role, I develop practical digital solutions using
+      web technologies and Google Workspace tools, with a growing focus on
+      workflow automation through n8n and responsible AI-assisted processes.
+      I am particularly interested in identifying repetitive tasks,
+      improving information management, and creating organized systems
+      that make everyday work more efficient.
+    </p>
+
+    <p>
+      I approach each task with a commitment to accuracy, confidentiality,
+      clear documentation, effective communication, and continuous
+      improvement. By combining structured problem-solving with technical
+      adaptability, I aim to help organizations strengthen their processes,
+      reduce unnecessary manual work, and build more reliable digital
+      operations.
+    </p>
+
+    <div class="mini-tags">
+      <span>Privacy Operations</span>
+      <span>Research &amp; Analysis</span>
+      <span>Process Documentation</span>
+      <span>Workflow Automation</span>
+      <span>Digital Solutions</span>
+      <span>Confidentiality</span>
+      <span>Continuous Improvement</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-head"><div><div class="section-kicker">How I can help</div><h2>Core Services</h2><p class="section-sub">Flexible support for small businesses, teams, and independent professionals.</p></div></div>
+  <div class="grid-3">
+    <article class="card"><div class="service-icon">▤</div><h3>Administrative Support</h3><p>Data entry, document organization, email management, research, records maintenance, and routine operational assistance.</p><div class="mini-tags"><span>Data Entry</span><span>Email</span><span>Google Workspace</span></div></article>
+    <article class="card"><div class="service-icon">§</div><h3>Legal Documentation Support</h3><p>Experience assisting with document preparation, organizing case files, drafting routine legal documents, and research support.</p><div class="mini-tags"><span>Document Formatting</span><span>File Organization</span><span>Legal Admin</span></div></article>
+    <article class="card"><div class="service-icon">◈</div><h3>Privacy Operations</h3><p>Data broker research, personal data exposure review, opt-out process documentation, and privacy-removal workflow support.</p><div class="mini-tags"><span>Broker Research</span><span>Opt-out Workflows</span><span>Documentation</span></div></article>
+    <article class="card"><div class="service-icon">⚙</div><h3>Workflow Automation</h3><p>Practical automation for repetitive tasks, form submissions, notifications, and data movement across connected tools.</p><div class="mini-tags"><span>n8n</span><span>Apps Script</span><span>Integrations</span></div></article>
+    <article class="card"><div class="service-icon">⌘</div><h3>Website & Web App Development</h3><p>Responsive websites and lightweight web applications, including booking forms, dashboards, and admin workflows.</p><div class="mini-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Deployment</span></div></article>
+    <article class="card"><div class="service-icon">☏</div><h3>Customer & Operations Support</h3><p>Customer communication, inquiry tracking, information updates, follow-ups, and structured support processes.</p><div class="mini-tags"><span>Customer Support</span><span>Record Tracking</span><span>Follow-up</span></div></article>
+  </div>
+</section>
+
+<section class="section" id="experience">
+  <div class="section-head"><div><div class="section-kicker">Professional background</div><h2>Experience</h2><p class="section-sub">Privacy operations, data broker research, legal support, and operational coordination.</p></div></div>
+  <div class="card"><div class="timeline">
+    <div class="timeline-item"><h3>Cybersecurity Personnel</h3><div class="meta">Optery, Inc. · Remote · Jan 2024 – Oct 2026</div><p>Supported privacy operations, system integrity, security compliance, and performance-related improvements through data broker investigation and workflow analysis.</p><ul><li>Investigated data brokers and identified potential personal data exposures.</li><li>Researched and documented opt-out and removal procedures.</li><li>Reviewed AI-driven system behavior and flagged anomalies, biases, or potential vulnerabilities for operational follow-up.</li><li>Contributed process guidance and workflow improvements to support privacy tools and removal operations.</li></ul></div>
+    <div class="timeline-item"><h3>Data Broker Maintenance Officer</h3><div class="meta">Optery, Inc. · Remote · Feb 2025 – Oct 2026</div><p>Maintained visibility into data broker opt-out processes, removal behavior, automation limitations, and the quality of personal data exposure reports.</p><ul><li>Monitored opt-out workflows and gathered information needed to support successful removals.</li><li>Tracked recurring automation and exposure-crawler issues and escalated them for resolution.</li><li>Supported quality checks and coordinated information for problematic brokers with relevant legal stakeholders.</li></ul></div>
+    <div class="timeline-item"><h3>Dishonorable Data Broker Focused Officer</h3><div class="meta">Optery, Inc. · Remote · Mar 2024 – Oct 2026</div><p>Researched alternative opt-out approaches for difficult data brokers and documented procedures for operational use.</p><ul><li>Investigated problematic broker behavior to identify workable removal paths.</li><li>Worked on solutions involving brokers including Radaris, Social Catfish, Intelius, Infotracer, and BeenVerified, as described in the résumé.</li><li>Served as an information resource for legal escalations and coordination with legal and development teams.</li></ul></div>
+    <div class="timeline-item"><h3>Operation Officer · On-the-Job Training</h3><div class="meta">Civil Aviation Authority of the Philippines (CAAP), Davao · May 2024 – Aug 2024</div><p>Supported day-to-day airport operations monitoring, reporting, records management, and coordination in an aviation environment.</p><ul><li>Monitored flight schedules, runway status, and airside/landside operations.</li><li>Documented incidents and operational activities and maintained records.</li><li>Entered and reviewed operational data, including traffic and weather information, to support reporting and decision-making.</li><li>Communicated with airline and ground personnel and helped identify operational risks and process improvements.</li></ul></div>
+    <div class="timeline-item"><h3>Virtual Legal Assistant</h3><div class="meta">Law Office · Aug 2022 – Dec 2023</div><p>Provided remote administrative and document support for a lawyer.</p><ul><li>Assisted with drafting legal documents such as extrajudicial settlements of estate, memoranda of agreement, loan agreements, and letters.</li><li>Communicated with clients by email and phone and interacted with other professionals.</li><li>Supported document organization and day-to-day legal administrative tasks.</li></ul></div>
+    <div class="timeline-item"><h3>Law Firm Secretary</h3><div class="meta">Law Firm · Jan 2021 – May 2022</div><p>Supported law office administration, client service, appointment scheduling, and legal documentation.</p><ul><li>Prepared and formatted legal documents, including pleadings, affidavits, deeds of sale, and extrajudicial settlement documents.</li><li>Organized records and supported legal research and professional correspondence.</li></ul></div>
+  </div></div>
+</section>
+
+<section class="section" id="skills">
+  <div class="section-head"><div><div class="section-kicker">Capabilities</div><h2>Skills & Tools</h2><p class="section-sub">A broad toolkit spanning operations, privacy, digital systems, research, and business support.</p></div></div>
+  <div class="grid-2">
+    <div class="card skill-group"><h3>Operations & Process Management</h3><div class="skill-chips"><span>Process Development</span><span>Workflow Documentation</span><span>SOP Development</span><span>Process Mapping</span><span>Quality Assurance</span><span>Data Validation</span><span>Operational Reporting</span><span>Issue Tracking</span><span>Continuous Improvement</span><span>Task Coordination</span><span>Records Management</span><span>Stakeholder Communication</span></div></div>
+    <div class="card skill-group"><h3>Privacy Operations & Data Broker Research</h3><div class="skill-chips"><span>Data Broker Research</span><span>Personal Data Exposure Analysis</span><span>Opt-Out and Removal Workflows</span><span>Digital Footprint Analysis</span><span>Removal Procedure Documentation</span><span>Privacy Request Processing</span><span>Automation Issue Monitoring</span><span>Exposure Report Quality</span><span>Privacy Risk Assessment</span><span>Legal Escalation Support</span><span>Sensitive Data Handling</span><span>Knowledge Base Maintenance</span></div></div>
+    <div class="card skill-group"><h3>Workflow Automation & Integrations</h3><div class="skill-chips"><span>n8n Workflow Concepts</span><span>Trigger and Action Design</span><span>Google Sheets Integration</span><span>Automated Email Notifications</span><span>Webhooks</span><span>API Integration Fundamentals</span><span>Conditional Logic</span><span>Data Mapping</span><span>Error Testing</span><span>Workflow Troubleshooting</span><span>Process Automation</span><span>Human-in-the-Loop Review</span></div></div>
+    <div class="card skill-group"><h3>Website & Web Application Development</h3><div class="skill-chips"><span>HTML5</span><span>CSS3</span><span>Responsive Web Design</span><span>JavaScript Fundamentals</span><span>Frontend Development</span><span>UI Implementation</span><span>Mobile-First Layouts</span><span>Form Validation</span><span>Admin Dashboards</span><span>Booking and Inquiry Systems</span><span>Website Testing</span><span>Debugging</span><span>Cloudflare Pages</span><span>Git and GitHub Fundamentals</span><span>SEO Fundamentals</span></div></div>
+    <div class="card skill-group"><h3>Google Workspace & Data Management</h3><div class="skill-chips"><span>Google Sheets</span><span>Spreadsheet Design</span><span>Formulas and Functions</span><span>Data Cleaning</span><span>Lookup and Conditional Formulas</span><span>Pivot Tables</span><span>Google Apps Script</span><span>Google Forms</span><span>Google Docs</span><span>Google Drive</span><span>Google Slides</span><span>Looker Studio</span><span>Data Visualization</span><span>CSV Management</span><span>Data Reconciliation</span><span>Report Preparation</span></div></div>
+    <div class="card skill-group"><h3>Research, Cybersecurity & Administration</h3><div class="skill-chips"><span>Technical Investigation</span><span>Cybersecurity Analysis</span><span>Threat Identification</span><span>Risk Analysis</span><span>Information Verification</span><span>Root Cause Analysis</span><span>Legal Document Preparation</span><span>Email Management</span><span>Customer Support</span><span>Data Entry</span><span>Client Communication</span><span>Confidentiality Awareness</span><span>Professional Correspondence</span></div></div>
+    <div class="card skill-group"><h3>Productivity & Project Tools</h3><div class="skill-chips"><span>Notion</span><span>Monday.com</span><span>Slack</span><span>Google Workspace</span><span>Task Tracking</span><span>Documentation</span><span>Research Organization</span></div></div>
+  </div>
+</section>
+
+<section class="section" id="ai">
+  <div class="section-head"><div><div class="section-kicker">Practical AI use</div><h2>AI & Intelligent Automation</h2><p class="section-sub">Using AI as an assistive tool for research, development, documentation, and process improvement, with human review.</p></div></div>
+  <div class="grid-2">
+    <div class="card skill-group"><h3>AI-Assisted Research & Analysis</h3><div class="skill-chips"><span>Research Synthesis</span><span>Information Structuring</span><span>Prompt Engineering</span><span>Context Design</span><span>AI Output Evaluation</span><span>Fact-Checking</span><span>AI Tool Testing</span><span>Decision Support</span></div></div>
+    <div class="card skill-group"><h3>AI-Enhanced Development & Operations</h3><div class="skill-chips"><span>Code Assistance</span><span>Debugging Support</span><span>Website Prototyping</span><span>Technical Documentation</span><span>Workflow Optimization</span><span>Automation Opportunity Identification</span><span>Business Process Support</span><span>Human-in-the-Loop Design</span></div></div>
+    <div class="card" style="grid-column:1/-1"><h3>Responsible AI Practice</h3><p>AI can accelerate drafting, analysis, and prototyping, but outputs require validation before operational use. Sensitive or confidential information should not be entered into AI tools unless the tool and workflow are approved for that data.</p></div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="section-head"><div><div class="section-kicker">Selected work</div><h2>Featured Projects</h2><p class="section-sub">Add your own project screenshots to the assets/projects folder when you're ready.</p></div></div>
+  <div class="grid-3">
+    <article class="card project">
+      <div class="project-visual visual-resort"><img class="project-image" src="assets/projects/andreas-resort.png" alt="Andreas White House Beach Resort website screenshot" onerror="this.style.display='none'"><span class="visual-symbol">⌂</span><div class="visual-label">Andreas White House<br>Beach Resort</div></div>
+      <div class="project-body"><div class="project-title-row"><h3>Andreas White House Beach Resort</h3><a href="https://andreaswhitehousebeachresort.com/" target="_blank" rel="noopener" aria-label="Visit resort website">↗</a></div><p>Responsive resort website and booking experience with accommodation information, booking forms, inquiry handling, and an administrative foundation.</p><div class="mini-tags"><span>Website Development</span><span>Booking Forms</span><span>Admin Workflows</span></div><div class="project-note"><a href="https://andreaswhitehousebeachresort.com/" target="_blank" rel="noopener">Visit the resort website ↗</a></div></div>
+    </article>
+    <article class="card project">
+      <div class="project-visual visual-finance"><img class="project-image" src="assets/projects/financial-dashboard.png" alt="Financial Management Dashboard screenshot" onerror="this.style.display='none'"><span class="visual-symbol">▥</span><div class="visual-label">Financial Management<br>Dashboard</div></div>
+      <div class="project-body"><h3>Financial Management Dashboard</h3><p>Dashboard concept for tracking cash inflow, expenses, debt, payment status, due dates, and available cash.</p><div class="mini-tags"><span>Google Sheets</span><span>Apps Script</span><span>Dashboards</span></div><div class="project-note">Personal Finance & Expense Tracking</div></div>
+    </article>
+    <article class="card project">
+      <div class="project-visual visual-automation"><img class="project-image" src="assets/projects/n8n-automation.png" alt="n8n workflow screenshot" onerror="this.style.display='none'"><span class="visual-symbol">⇄</span><div class="visual-label">Workflow<br>Automation</div></div>
+      <div class="project-body"><h3>Booking & Inquiry Notifications</h3><p>Workflow design exploring how form submissions and spreadsheet records can trigger email notifications and record updates.</p><div class="mini-tags"><span>n8n</span><span>Google Sheets</span><span>Email Automation</span></div><div class="project-note">Workflow Design & Email Automation</div></div>
+    </article>
+    <article class="card project">
+      <div class="project-visual visual-privacy"><img class="project-image" src="assets/projects/privacy-operations.png" alt="Privacy operations platform screenshot" onerror="this.style.display='none'"><span class="visual-symbol">◈</span><div class="visual-label">Privacy Operations<br>Intelligence</div></div>
+      <div class="project-body"><h3>Data Broker Intelligence Platform</h3><p>A structured privacy operations resource concept for organizing broker profiles, risk indicators, removal difficulty, and opt-out guidance. Public examples should use synthetic data.</p><div class="mini-tags"><span>Privacy Research</span><span>Structured Data</span><span>Process Guides</span></div><div class="project-note">Privacy Research & Process Documentation</div></div>
+    </article>
+    <article class="card project">
+      <div class="project-visual visual-consulting"><img class="project-image" src="assets/projects/gregori-consulting.png" alt="Gregori Operations Consulting website screenshot" onerror="this.style.display='none'"><span class="visual-symbol">⌘</span><div class="visual-label">Gregori Operations<br>Consulting</div></div>
+      <div class="project-body"><h3>Operations Consulting Web Platform</h3><p>A professional online presence for operations support, privacy operations, workflow automation, and digital services.</p><div class="mini-tags"><span>Web Design</span><span>Service Presentation</span><span>Portfolio</span></div><div class="project-note">Operations Consulting & Digital Solutions</div></div>
+    </article>
+    <article class="card project">
+      <div class="project-visual" style="background:linear-gradient(135deg,#fbe5d4,#f5bd91)"><img class="project-image" src="assets/projects/sales-tracker.png" alt="Sales tracker dashboard screenshot" onerror="this.style.display='none'"><span class="visual-symbol">▧</span><div class="visual-label">Sales & Payment<br>Record Systems</div></div>
+      <div class="project-body"><h3>Sales & Payment Record Management</h3><p>Application concept for recording sales, calculating installment balances, tracking payments, and separating paid records from outstanding balances.</p><div class="mini-tags"><span>Data Management</span><span>Payment Tracking</span><span>Business Logic</span></div><div class="project-note">Sales Tracking & Installment Management</div></div>
+    </article>
+  </div>
+  <p class="section-sub" style="margin-top:12px">We can add a separate project-details page later and link each project card to its detailed case study.</p>
+</section>
+
+<section class="section" id="case-studies">
+  <div class="section-head"><div><div class="section-kicker">How I work</div><h2>Case Study Highlights</h2><p class="section-sub">The problem-solving approach behind the work.</p></div></div>
+  <div class="grid-2">
+    <div class="card case"><div class="case-num">01</div><div><h3>Organizing Privacy Removal Processes</h3><p><b>Challenge:</b> Data brokers use different opt-out requirements. <b>Approach:</b> Research, document, and categorize procedures. <b>Value:</b> Clearer instructions and more repeatable workflows.</p></div></div>
+    <div class="card case"><div class="case-num">02</div><div><h3>Managing Booking Inquiries</h3><p><b>Challenge:</b> Inquiries can be missed when they require manual checking. <b>Approach:</b> Structure form submissions and connect notifications and admin views. <b>Value:</b> More visible requests and clearer follow-up.</p></div></div>
+    <div class="card case"><div class="case-num">03</div><div><h3>Turning Financial Records Into Useful Views</h3><p><b>Challenge:</b> Expenses and due dates can be hard to track across separate records. <b>Approach:</b> Organize records and calculate totals in a dashboard. <b>Value:</b> A clearer view of upcoming obligations and available cash.</p></div></div>
+    <div class="card case"><div class="case-num">04</div><div><h3>Reducing Repetitive Administrative Work</h3><p><b>Challenge:</b> Copying information and updating records repeatedly consumes time. <b>Approach:</b> Map the steps and identify suitable automation triggers. <b>Value:</b> Fewer manual steps and more consistent processes.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="testimonials">
+  <div class="section-head"><div><div class="section-kicker">Client feedback</div><h2>Testimonials</h2><p class="section-sub">Client feedback and recommendations.</p></div></div>
+  <div class="grid-3">
+    <article class="card">
+      <div class="testimonial-head">
+        <img class="testimonial-photo" src="assets/testimonials/hideko-tachibana.jpg" alt="Hideko Tachibana" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="testimonial-initials" style="display:none">HT</div>
+        <div><h3 class="testimonial-name">Hideko Tachibana</h3><div class="testimonial-role">Optery</div></div>
+      </div>
+      <div class="stars" aria-label="Five star rating">★★★★★</div>
+      <p class="testimonial-placeholder">Add Hideko's approved testimonial here before publishing this endorsement.</p>
+    </article>
+    <article class="card">
+      <div class="testimonial-head">
+        <img class="testimonial-photo" src="assets/testimonials/client-two.jpg" alt="Client two" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="testimonial-initials" style="display:none">C2</div>
+        <div><h3 class="testimonial-name">Client Name</h3><div class="testimonial-role">Client or organization</div></div>
+      </div>
+      <div class="stars" aria-label="Five star rating">★★★★★</div>
+      <p class="testimonial-placeholder">Replace with a genuine, approved client testimonial.</p>
+    </article>
+    <article class="card">
+      <div class="testimonial-head">
+        <img class="testimonial-photo" src="assets/testimonials/client-three.jpg" alt="Client three" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <div class="testimonial-initials" style="display:none">C3</div>
+        <div><h3 class="testimonial-name">Client Name</h3><div class="testimonial-role">Client or organization</div></div>
+      </div>
+      <div class="stars" aria-label="Five star rating">★★★★★</div>
+      <p class="testimonial-placeholder">Replace with a genuine, approved client testimonial.</p>
+    </article>
+  </div>
+  <p class="section-sub" style="margin-top:10px">These are placeholders. Add real testimonials, ratings, names, and photos only with each person's permission.</p>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact-panel">
+    <div><div class="eyebrow">Let's work together</div><h2>Need reliable support for your next project?</h2><p>I'm open to discussing part-time, remote, and project-based opportunities.</p>
+      <div class="contact-links">
+        <a class="btn btn-primary" href="mailto:Lingzhigregori13@gmail.com?subject=Portfolio%20Inquiry">✉ Lingzhigregori13@gmail.com</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/lingzhi-gregori-8b7629243/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><span>© <span id="year"></span> Lingzhi Gregori · Professional Portfolio</span><span>Built to present experience, services, and selected project work.</span></footer>
+</div>
+</main>
+</div>
+
+<dialog class="image-dialog" id="profilePhotoDialog" aria-labelledby="profilePhotoCaption">
+  <button class="dialog-close" type="button" id="closeProfilePhoto" aria-label="Close enlarged profile photo">×</button>
+  <img src="assets/profile.png" alt="Enlarged professional portrait of Lingzhi Gregori">
+  <div class="dialog-caption" id="profilePhotoCaption">Lingzhi Gregori · Professional portrait</div>
+</dialog>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const links = [...document.querySelectorAll('.nav a')];
+const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+      }
+    });
+  }, { rootMargin: '-25% 0px -65% 0px' });
+  sections.forEach(section => observer.observe(section));
+}
+
+const profileDialog = document.getElementById('profilePhotoDialog');
+const openProfilePhoto = document.getElementById('openProfilePhoto');
+const closeProfilePhoto = document.getElementById('closeProfilePhoto');
+
+openProfilePhoto.addEventListener('click', () => profileDialog.showModal());
+closeProfilePhoto.addEventListener('click', () => profileDialog.close());
+profileDialog.addEventListener('click', event => {
+  if (event.target === profileDialog) profileDialog.close();
+});
+</script>
+</body>
+</html>
